@@ -21,7 +21,7 @@ function Hero() {
             <div className="hero-content">
 
                 <p className="eyebrow">
-                    SOFTWARE  AI  SECURITY
+                    Think it Build it Ship it.
                 </p>
 
 
@@ -56,7 +56,7 @@ function Hero() {
 
                     {" "}
                     solutions at the intersection
-                    of AI, cybersecurity and software.
+                    of AI, cybersecurity and full-stack development.
 
                 </p>
 
