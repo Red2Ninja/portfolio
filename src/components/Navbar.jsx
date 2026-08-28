@@ -34,8 +34,10 @@ function Navbar() {
 
 
             <a
-                href="mailto:aaryanagvekar@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=aaryanagvekar%40gmail.com"
                 className="nav-email"
+                target="_blank"
+                rel="noreferrer"
             >
                 EMAIL ME
                 <span>✉</span>

@@ -28,8 +28,10 @@ function App() {
                     </h2>
 
                     <a
-                        href="mailto:aaryanagvekar@gmail.com"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=aaryanagvekar%40gmail.com"
                         className="contact-email"
+                        target="_blank"
+                        rel="noreferrer"
                     >
                         aaryanagvekar@gmail.com ↗
                     </a>
