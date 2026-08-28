@@ -4,15 +4,7 @@ function Footer() {
         <footer>
 
             <span>
-                © 2026 AARYA NAGVEKAR
-            </span>
-
-            <span>
-                AI · SECURITY · SOFTWARE
-            </span>
-
-            <span>
-                BUILT WITH CURIOSITY.
+                AARYA NAGVEKAR
             </span>
 
         </footer>
