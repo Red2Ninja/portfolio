@@ -1,0 +1,1456 @@
+/* ============================================================
+   NAVBAR
+============================================================ */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 22px 5vw;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    background:
+        linear-gradient(
+            rgba(8,8,8,0.96),
+            transparent
+        );
+
+}
+
+
+.logo {
+
+    font-family:
+        "Permanent Marker",
+        cursive;
+
+    font-size: 1.7rem;
+
+    transform: rotate(-5deg);
+
+}
+
+
+.logo span {
+
+    color: var(--pink);
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.75rem;
+
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+}
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 3px;
+
+    background: var(--pink);
+
+    transition: 0.25s;
+
+}
+
+
+.nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+
+.email-btn {
+
+    background: var(--pink);
+
+    color: #050505;
+
+    padding: 11px 18px;
+
+    font-family:
+        "Permanent Marker",
+        cursive;
+
+    transform: rotate(-2deg);
+
+    transition: 0.25s;
+
+}
+
+
+.email-btn:hover {
+
+    transform:
+        rotate(2deg)
+        scale(1.05);
+
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        120px
+        7vw
+        80px;
+
+    overflow: hidden;
+
+}
+
+
+.hero-content {
+
+    width: 65%;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.eyebrow {
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.8rem;
+
+    color: var(--pink);
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-title {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(
+            6rem,
+            15vw,
+            14rem
+        );
+
+    line-height: 0.72;
+
+    letter-spacing: -4px;
+
+}
+
+
+.hero-title span {
+
+    display: block;
+
+    color: var(--pink);
+
+    margin-left: 8vw;
+
+}
+
+
+.hero-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 45%;
+
+    height: 9px;
+
+    margin-top: 30px;
+
+    margin-left: 10%;
+
+    background: var(--pink);
+
+    transform: rotate(-3deg);
+
+}
+
+
+.hero-description {
+
+    max-width: 560px;
+
+    margin-top: 65px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.9rem;
+
+    line-height: 1.9;
+
+    color: #d2cec7;
+
+}
+
+
+.hero-description strong {
+
+    color: var(--pink);
+
+}
+
+
+.explore-btn {
+
+    display: inline-flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    margin-top: 35px;
+
+    padding: 15px 25px;
+
+    background: var(--white);
+
+    color: #050505;
+
+    font-family:
+        "Permanent Marker",
+        cursive;
+
+    transform: rotate(-2deg);
+
+    transition: 0.25s;
+
+}
+
+
+.explore-btn:hover {
+
+    transform:
+        rotate(1deg)
+        translateY(-5px);
+
+}
+
+
+.explore-btn span {
+
+    color: var(--pink);
+
+    font-size: 1.5rem;
+
+}
+
+
+/* ============================================================
+   HERO ART
+============================================================ */
+
+.hero-art {
+
+    position: absolute;
+
+    right: 8%;
+
+    top: 18%;
+
+    width: 30vw;
+
+    max-width: 420px;
+
+    z-index: 2;
+
+}
+
+
+.portrait {
+
+    height: 60vh;
+
+    min-height: 450px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #171717;
+
+    border-left: 8px solid var(--pink);
+
+    transform: rotate(4deg);
+
+}
+
+
+.portrait img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    filter:
+        grayscale(100%)
+        contrast(1.25)
+        brightness(0.9);
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+/* Pink graffiti / stencil overlay */
+
+.portrait-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 35%,
+            rgba(255, 33, 140, 0.35)
+        );
+
+    mix-blend-mode: screen;
+
+    pointer-events: none;
+
+}
+
+
+/* Small halftone texture */
+
+.portrait::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.18;
+
+    background-image:
+        radial-gradient(
+            white 1px,
+            transparent 1px
+        );
+
+    background-size: 6px 6px;
+
+}
+.art-note {
+
+    position: absolute;
+
+    right: -30px;
+
+    bottom: 30px;
+
+    font-family:
+        "Permanent Marker",
+        cursive;
+
+    font-size: 1.5rem;
+
+    transform: rotate(-7deg);
+
+}
+
+
+/* ============================================================
+   PAINT
+============================================================ */
+
+.paint-splash {
+
+    position: absolute;
+
+    background: var(--pink);
+
+    opacity: 0.8;
+
+}
+
+
+.splash-one {
+
+    width: 260px;
+
+    height: 45px;
+
+    right: -60px;
+
+    top: 25%;
+
+    transform: rotate(-12deg);
+
+}
+
+
+.splash-two {
+
+    width: 150px;
+
+    height: 35px;
+
+    left: -50px;
+
+    bottom: 20%;
+
+    transform: rotate(25deg);
+
+}
+
+
+.splash-three {
+
+    width: 90px;
+
+    height: 20px;
+
+    right: 30%;
+
+    bottom: 12%;
+
+    transform: rotate(-15deg);
+
+}
+
+
+/* ============================================================
+   SCROLL
+============================================================ */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.65rem;
+
+    animation:
+        bounce 1.5s infinite;
+
+}
+
+
+.scroll-indicator span {
+
+    font-size: 1.5rem;
+
+    color: var(--pink);
+
+}
+
+
+@keyframes bounce {
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            translateY(8px);
+
+    }
+
+}
+
+
+/* ============================================================
+   SECTIONS
+============================================================ */
+
+.section {
+
+    min-height: 100vh;
+
+    padding:
+        130px
+        7vw;
+
+}
+
+
+.skills-section {
+
+    background: #0d0d0d;
+
+}
+
+
+.projects-section {
+
+    background: #080808;
+
+}
+
+
+.projects-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 70px;
+
+}
+
+
+.projects-header > div:first-child > p {
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 0.7rem;
+
+    color: var(--gray);
+
+    margin-bottom: 15px;
+
+}
+
+
+.projects-header h2 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(5rem, 10vw, 9rem);
+
+    line-height: 0.8;
+
+}
+
+
+.projects-header h2 span,
+.projects-footer span {
+
+    color: var(--pink);
+
+}
+
+
+.projects-note {
+
+    color: var(--pink);
+
+    font-family: "Permanent Marker", cursive;
+
+    font-size: 1.5rem;
+
+    line-height: 1.15;
+
+    transform: rotate(-5deg);
+
+}
+
+
+.projects-list {
+
+    width: 100%;
+
+}
+
+
+.project-card {
+
+    display: grid;
+
+    grid-template-columns: 70px 270px 1fr 130px;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition: 0.3s;
+
+}
+
+
+.project-card:hover {
+
+    padding-left: 15px;
+
+    border-color: var(--pink);
+
+}
+
+
+.project-image {
+
+    height: 165px;
+
+    border: 2px solid var(--white);
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transform: rotate(-2deg);
+
+    background: #151515;
+
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s;
+
+}
+
+
+.project-card:hover .project-image img {
+
+    transform: scale(1.08);
+
+}
+
+
+.project-content h3 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 2.7rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.project-content p {
+
+    max-width: 620px;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 0.72rem;
+
+    line-height: 1.8;
+
+    color: var(--gray);
+
+}
+
+
+.project-tech {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 15px;
+
+}
+
+
+.project-tech span {
+
+    border: 1px solid var(--border);
+
+    padding: 5px 8px;
+
+    font-family: "Space Mono", monospace;
+
+    font-size: 0.6rem;
+
+}
+
+
+.projects-footer {
+
+    margin-top: 70px;
+
+    font-family: "Permanent Marker", cursive;
+
+    font-size: 1.2rem;
+
+    color: var(--gray);
+
+}
+
+
+/* ============================================================
+   HEADINGS
+============================================================ */
+
+.section-heading {
+
+    margin-bottom: 80px;
+
+}
+
+
+.section-label {
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.7rem;
+
+    color: var(--gray);
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading h2 {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(
+            5rem,
+            10vw,
+            9rem
+        );
+
+    line-height: 0.8;
+
+}
+
+
+.section-heading h2 span {
+
+    color: var(--pink);
+
+}
+
+
+.section-heading h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 170px;
+
+    height: 8px;
+
+    background: var(--pink);
+
+    margin-top: 20px;
+
+    transform: rotate(-2deg);
+
+}
+
+
+/* ============================================================
+   SKILLS
+============================================================ */
+
+.skills-grid {
+
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        0 60px;
+
+}
+
+
+.skill-category {
+
+    padding:
+        35px 0;
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.skill-category h3 {
+
+    display: inline-block;
+
+    padding:
+        7px 15px;
+
+    margin-bottom: 25px;
+
+    background: var(--pink);
+
+    color: #080808;
+
+    font-family:
+        "Permanent Marker",
+        cursive;
+
+    font-size: 0.9rem;
+
+    transform: rotate(-2deg);
+
+}
+
+
+.skill-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+/* Skill logo cards */
+
+.skill-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        10px 14px;
+
+    border:
+        1px solid var(--border);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.7rem;
+
+    transition:
+        0.25s;
+
+}
+
+
+.skill-item img {
+
+    width: 22px;
+
+    height: 22px;
+
+    object-fit: contain;
+
+    filter:
+        grayscale(1)
+        brightness(1.8);
+
+    transition:
+        0.25s;
+
+}
+
+
+.skill-item:hover {
+
+    background: var(--pink);
+
+    color: #080808;
+
+    border-color:
+        var(--pink);
+
+    transform:
+        rotate(-2deg)
+        translateY(-4px);
+
+}
+
+
+.skill-item:hover img {
+
+    filter:
+        grayscale(0)
+        brightness(1);
+
+}
+
+
+.skill-wide {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* ============================================================
+   PROJECTS
+============================================================ */
+
+.projects-container {
+
+    width: 100%;
+
+}
+
+
+.project {
+
+    display: grid;
+
+    grid-template-columns:
+        70px
+        270px
+        1fr
+        130px;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding:
+        35px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+    transition:
+        0.3s;
+
+}
+
+
+.project:hover {
+
+    padding-left: 15px;
+
+    border-color:
+        var(--pink);
+
+}
+
+
+.project-number {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 4rem;
+
+    color: var(--pink);
+
+}
+
+
+.project-preview {
+
+    height: 165px;
+
+    border:
+        2px solid var(--white);
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transform:
+        rotate(-2deg);
+
+    background:
+        #151515;
+
+}
+
+
+.project-preview img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s;
+
+}
+
+
+.project:hover
+.project-preview img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.project-info h3 {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size: 2.7rem;
+
+    margin-bottom: 10px;
+
+}
+
+
+.project-info p {
+
+    max-width: 620px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.72rem;
+
+    line-height: 1.8;
+
+    color: var(--gray);
+
+}
+
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 15px;
+
+}
+
+
+.project-tags span {
+
+    border:
+        1px solid var(--border);
+
+    padding:
+        5px 8px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.6rem;
+
+}
+
+
+.project-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.7rem;
+
+}
+
+
+.project-links a {
+
+    color: var(--pink);
+
+}
+
+
+.project-links a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ============================================================
+   CONTACT
+============================================================ */
+
+.contact-section {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.contact-section h2 {
+
+    font-family:
+        "Bebas Neue",
+        sans-serif;
+
+    font-size:
+        clamp(
+            5rem,
+            13vw,
+            12rem
+        );
+
+    line-height: 0.75;
+
+}
+
+
+.contact-section h2 span {
+
+    color: var(--pink);
+
+}
+
+
+.contact-email {
+
+    margin-top: 50px;
+
+    padding-bottom: 8px;
+
+    border-bottom:
+        2px solid var(--pink);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    color: var(--pink);
+
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+
+    padding:
+        30px 7vw;
+
+    border-top:
+        1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: 0.65rem;
+
+    color: var(--gray);
+
+}
+
+
+footer span {
+
+    display: block;
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-art {
+
+        opacity: 0.25;
+
+        right: -10%;
+
+        width: 60vw;
+
+    }
+
+
+    .project-card {
+
+        grid-template-columns:
+            60px
+            230px
+            1fr;
+
+    }
+
+
+    .project-links {
+
+        grid-column: 3;
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .hero-title {
+
+        font-size: 24vw;
+
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .skill-wide {
+
+        grid-column: auto;
+
+    }
+
+
+    .project-card {
+
+        grid-template-columns:
+            45px
+            1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .project-image {
+
+        display: none;
+
+    }
+
+
+    .project-content {
+
+        grid-column: 2;
+
+    }
+
+
+    .project-links {
+
+        grid-column: 2;
+
+        flex-direction: row;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+
+        padding:
+            18px 6vw;
+
+    }
+
+
+    .email-btn {
+
+        display: none;
+
+    }
+
+
+    .hero,
+    .section {
+
+        padding-left: 6vw;
+
+        padding-right: 6vw;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 25vw;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 0.72rem;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 22vw;
+
+    }
+
+
+    .project-content h3 {
+
+        font-size: 2rem;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
